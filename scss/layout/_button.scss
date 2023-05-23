@@ -1,0 +1,44 @@
+@use '../utils' as u;
+@use '../globals/colors' as *;
+
+button {
+    height: u.rem(60);
+    border-radius: u.rem(8);
+    border: none;
+
+    &:hover {
+        filter: brightness(1.25);
+    }
+
+    &:active {
+        filter : brightness(1.25);
+        transform: translateY(u.rem(4));
+        }
+    
+    // @include u.breakpoint-down(medium) {
+    //     box-shadow: 0px 5px $dark-grayish-orange;
+    // }
+
+    // &.number, &.operator, &#dot{
+    //     background-color: $light-grayish-orange;
+    //     box-shadow: 0px 4px $dark-grayish-orange;
+    //     color: $vd-grayish-blue;
+    //     &:active {box-shadow: none;}
+    // }
+
+    // &#backspace, &#reset {
+    //     background-color: $dd-blue-1;
+    //     box-shadow: 0px 4px $dd-blue-2;
+    //     color: $white;
+    //     &:active {box-shadow: none;}
+    // }
+
+    // &#equal {
+    //     background-color: $red;
+    //     box-shadow: 0px 4px $dark-red;
+    //     color: $white;
+    //     &:active {box-shadow: none;}
+    // }
+
+}
+

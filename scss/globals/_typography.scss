@@ -1,0 +1,72 @@
+@use '../utils' as u;
+@use '../globals/colors' as *;
+body {
+    font-family: u.$League;
+}
+
+.logo {
+    font-family: u.$League;
+    font-size: u.rem(32);
+    font-weight: 700;
+    // color: $white;
+}
+
+.textLabels {
+    font-family: u.$League;
+    font-size: u.rem(12);
+    // color: $white;
+    font-weight: 600;
+}
+
+.theme {
+    text-transform: uppercase;
+    font-size: u.rem(11);
+    font-family: u.$League;
+    // color: $white;
+    font-weight: 600;
+    letter-spacing: u.rem(2);
+}
+
+#history {
+    font-family: u.$League;;
+    font-size: 28px;
+    line-height: u.rem(60);
+
+}
+
+#screen {
+    font-family: u.$League;;
+    font-size: 42px;
+    line-height: u.rem(112);
+    text-align: right;
+    font-weight: 700;
+}
+
+button {
+    font-family: u.$League;
+    font-weight: 700;
+    &.number, &.operator {
+       font-size: u.rem(32);
+    }
+    &#dot{
+        font-size: u.rem(42);
+     }
+
+    &#backspace, &#reset {
+        font-size: u.rem(20);
+        letter-spacing: u.rem(1);
+    }
+    &#equal {
+        font-size: u.rem(24);
+    }
+}
+
+.attribution {
+    font-size: u.rem(12);
+    font-family: u.$League;;
+    text-align: center;
+
+    &a {
+        color: var(--grayish);
+    }
+}

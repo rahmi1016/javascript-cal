@@ -1,0 +1,67 @@
+@use '../utils' as u;
+@use '../globals/colors' as *;
+
+//argument for mixin
+    //theme : theme-1 (body class name)
+    //Backgrounds : $main-bg, $toogle-keypad-bg, $screen-bg
+    //keys number : $number-bg, $number-shdw 
+    //key equal : $equal-bg-tog, $equal-shdw
+    //key reset : $reset-bg, reset-shdw
+    //text : $text-light, $text-dark
+
+@mixin themable($theme-name, $main-bg, $toogle-keypad-bg, $screen-bg, $number-bg, $number-shdw, $equal-bg-tog, $equal-shdw, $reset-bg, $reset-shdw, $text-number, $text-reset, $text-equal, $text-screen)  {
+    .#{$theme-name} {
+        #main-container{
+            background-color: $main-bg;
+        }
+        #history {
+            background-color: $screen-bg;
+            color: $text-screen;
+        }
+        #screen {
+            background-color: $screen-bg;
+            color: $text-screen;
+        }
+        .container {
+            background-color: $toogle-keypad-bg;
+        }
+        .btnBar {
+            background-color: $toogle-keypad-bg;
+        }
+        .toggleDot {
+            background-color: $equal-bg-tog;
+        }
+        button {
+            &.number, &.operator, &#dot{
+                background-color: $number-bg;
+                box-shadow: 0px 4px $number-shdw;
+                color: $text-number;
+                &:active {box-shadow: none;}
+            }
+
+            &#backspace, &#reset {
+                background-color: $reset-bg;
+                box-shadow: 0px 4px $reset-shdw;
+                color: $text-reset;
+                &:active {box-shadow: none;}
+            }
+        
+            &#equal {
+                background-color: $equal-bg-tog;
+                box-shadow: 0px 4px $equal-shdw;
+                color: $text-equal;
+                &:active {box-shadow: none;}
+            }
+        }
+        .logo, .textLabels, .theme, .attribution {
+            color: $text-screen;
+        }
+
+    }
+}
+
+@include themable(theme-1, $vdd-blue-1, $vdd-blue-2, $vdd-blue-3, $light-grayish-orange, $grayish-orange, $red, $dark-red, $dd-blue-1, $dd-blue-2, $vd-grayish-blue, $white, $white, $white);
+
+@include themable(theme-2, $light-gray, $grayish-red, $vl-gray, $light-grayish-yellow, $dark-grayish-orange,  $orange, $dark-orange, $dark-moderate-cyan, $vd-cyan,  $vd-grayish-yellow, $white, $white, $vd-grayish-yellow);
+
+@include themable(theme-3, $vd-violet-1, $vd-violet-2, $vd-violet-2, $vd-violet-3, $dark-magenta, $pure-cyan, $soft-cyan,  $dark-violet, $vivid-magenta, $light-yellow, $white, $vd-blue, $light-yellow);

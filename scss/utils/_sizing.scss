@@ -1,0 +1,13 @@
+
+//desktop size
+$dwidth: 545px;
+$dheight: 330px;
+$dmarleft: max(10px, calc((100vw - $dwidth)/2));
+$dmartop: max(10px, calc((100vh - $dheight)/2));
+
+//mobile size
+$mwidth: 330px;
+$mmarleft: max(17.5px, calc((100vw - $mwidth)/2));
+
+//header
+$dheader-height: 56px;
