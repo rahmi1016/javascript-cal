@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github page](https://github.com/rahmi1016/javascript-cal)
+- Live Site URL: [live site](https://rahmi1016.github.io/javascript-cal/)
 
 ## My process
 
